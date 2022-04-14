@@ -1,6 +1,7 @@
 # React + Typescript
 
-### Library
-> Styling - styled-components
+### Add Library
+> Styling - styled-components   
+> Redux, React-Redux
 
 ### API
