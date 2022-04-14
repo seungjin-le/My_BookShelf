@@ -1,16 +1,15 @@
-
 type GetProps = {
-  title: string,
-  text?: string,
-}
+  title: string;
+  text?: string;
+};
 
-const Home = ({title,text} : GetProps) => {
+const Home = ({ title, text }: GetProps) => {
   return (
     <div>
-      <div>{title}</div>
-      <div>{text}</div>
+      <h1>{title}</h1>
+      <h3>{text}</h3>
     </div>
-  )
-}
+  );
+};
 
 export default Home;
