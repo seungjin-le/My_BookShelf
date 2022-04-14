@@ -1,12 +1,6 @@
-## Typescript Type명시
+# React + Typescript
 
-### 변수
+### Library
+> Styling - styled-components
 
-```javascript
- 
-```
-
-### function
-### Object
-### interface
-### 변수
+### API
