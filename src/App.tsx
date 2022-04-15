@@ -2,7 +2,8 @@ import React from 'react';
 import Home from './page/home';
 import CounterContainer from './containers/CounterContainer';
 import TodoApp from './containers/TodoApp';
-import Users from './api/Users';
+// import Users from './api/Users';
+
 const App = () => {
   return (
     <div>
@@ -10,7 +11,7 @@ const App = () => {
       <CounterContainer />
       <hr />
       <TodoApp />
-      <Users />
+      {/*<Users />*/}
     </div>
   );
 };
