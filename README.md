@@ -2,6 +2,7 @@
 
 ### Add Library
 > Styling - styled-components   
-> Redux, React-Redux
+> State - Redux, React-Redux  
+> Actions - typesafe-actions
 
 ### API
