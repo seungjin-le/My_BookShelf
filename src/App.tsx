@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './page/home';
 import CounterContainer from './containers/CounterContainer';
 import TodoApp from './containers/TodoApp';
-import Users from './api/Users';
+import Users from './utils/api/Users';
 
 const App = () => {
   return (

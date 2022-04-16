@@ -1,4 +1,4 @@
-import { Todo } from '../modules/Todos';
+import { Todo } from '../store/redux/Todos';
 import { CSSProperties } from 'react';
 
 type TodoItemProps = {

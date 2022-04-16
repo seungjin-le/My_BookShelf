@@ -1,4 +1,4 @@
-import { Todo } from '../modules/Todos';
+import { Todo } from '../store/redux/Todos';
 import TodoItem from './TodoItem';
 
 type TodoListProps = {
