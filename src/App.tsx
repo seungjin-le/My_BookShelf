@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './page/home';
-import CounterContainer from './containers/CounterContainer';
-import TodoApp from './containers/TodoApp';
+import CounterContainer from './store/redux/counter/CounterContainer';
+import TodoApp from './store/redux/todo/TodoApp';
 import Users from './utils/api/Users';
 
 const App = () => {

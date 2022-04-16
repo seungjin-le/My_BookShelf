@@ -1,7 +1,7 @@
 # React + Typescript
 
 ### Add Library
-> + Styling - styled-components   
+> + Styling - Sass   
 > + State - Redux, React-Redux, Redux-Saga  
 > + Actions - typesafe-actions
 > + Api - axios
