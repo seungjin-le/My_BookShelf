@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import Home from './page/home';
 import Users from './utils/api/Users';
+import PostsList from "./components/PostsList";
+
+export const UserApi = createContext('unknown')
 
 const App = () => {
   return (
-    <div>
+    <UserApi.Provider value={'반가워요'}>
       <Home title={'React + TypeScript'} text={'React-Redux test'} >
         {/* Counter */}
         {/*<CounterContainer />*/}
@@ -14,8 +17,9 @@ const App = () => {
 
         {/* Users Api */}
         <Users />
+        <PostsList />
       </Home>
-    </div>
+    </UserApi.Provider>
   );
 };
 
