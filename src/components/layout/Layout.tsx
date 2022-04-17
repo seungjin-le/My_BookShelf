@@ -1,4 +1,4 @@
-
+import './layout.sass'
 
 type Children = {
   children? : JSX.Element | JSX.Element[]
@@ -6,8 +6,10 @@ type Children = {
 
 const Layout = ({children} : Children) => {
   return (
-    <div>
-      {children}
+    <div className='layoutBody'>
+      <div className='contentBox'>
+        {children}
+      </div>
     </div>
   );
 }
