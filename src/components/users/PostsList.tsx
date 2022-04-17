@@ -1,5 +1,5 @@
 import {useContext, useEffect, useState} from "react";
-import {UserApi} from "../App";
+import {UserApi} from "../../App";
 
 const PostsList = () => {
 
