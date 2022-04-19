@@ -1,4 +1,4 @@
-import './layout.sass'
+//import './layout.sass'
 
 type Children = {
   children? : JSX.Element | JSX.Element[]

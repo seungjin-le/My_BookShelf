@@ -8,7 +8,7 @@ export const UserApi = createContext('unknown')
 const App = () => {
   return (
     <UserApi.Provider value={'반가워요'}>
-      <Home title={'React + TypeScript'} text={'React-Redux test'} />
+      <Home title={'React + TypeScript'} />
     </UserApi.Provider>
   );
 };
