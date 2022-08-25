@@ -1,7 +1,5 @@
 import React, {createContext} from 'react';
 import Home from './page/home';
-import UsersApi from './utils/api/UsersApi';
-import PostsList from "./components/users/PostsList";
 
 export const UserApi = createContext('unknown')
 
