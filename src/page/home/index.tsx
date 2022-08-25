@@ -8,6 +8,7 @@ type GetProps = {
 const Home = ({ title }: GetProps) => {
   return (
     <div>
+      asd
       <h1>{title}</h1>
     </div>
   );
