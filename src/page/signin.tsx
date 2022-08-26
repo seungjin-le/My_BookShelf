@@ -1,10 +1,9 @@
 import React from 'react';
+import SignInContainer from '../containers/signInContainer';
 
 const SignIn = () => {
   return (
-    <div>
-
-    </div>
+    <SignInContainer />
   );
 };
 
