@@ -1,11 +1,11 @@
 # React + Typescript
 
 ### Add Library
-> + Styling - Sass   
-> + State - Redux, React-Redux, Redux-Saga  
+> + Styling - Sass, ant-design/icons   
+> + State - Redux, Redux-Saga, Redux-Actions, React-Redux, Redux-Saga  
 > + Actions - typesafe-actions
 > + Api - axios
-
+> + Code - esLint, pretty
 ### API
 > + JSONPlaceholder
 

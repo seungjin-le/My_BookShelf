@@ -40,6 +40,8 @@ export default reducer
 
 // saga
 
+export const {logIn, logOut} = createActions('LOGIN','LOGOUT', {prefix})
+
 export function* authSaga() {
 
 }
