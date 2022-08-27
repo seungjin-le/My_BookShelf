@@ -1,33 +1,33 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Button, Col, Input, Row } from 'antd';
 import styles from './signIn.module.scss';
 
-type loginData = {
-  email : string,
-  password: string
-}
+export type loginData = {
+  email: string;
+  password: string;
+};
 
 interface SigInProps {
-  login : (reqData : loginData) => void
+  login: (reqData: loginData) => void;
 }
 
-const SignIn : React.FC<SigInProps> = ({login}) => {
+const SignIn: React.FC<SigInProps> = ({ login }) => {
   const [user, setUser] = useState<loginData>({
-    email:'',
-    password:''
+    email: '',
+    password: '',
   });
-  const userOnChange = ({target} : any) => {
+  const userOnChange = ({ target }: any) => {
     setUser({
       ...user,
-      [target.name] : target.value
-    })
-  }
+      [target.name]: target.value,
+    });
+  };
   const click = () => {
     setUser({
-      email:'',
-      password:''
-    })
-  }
+      email: '',
+      password: '',
+    });
+  };
   return (
     <Row align={'middle'} className={styles.signin_row}>
       <Col span={24}>
@@ -64,7 +64,12 @@ const SignIn : React.FC<SigInProps> = ({login}) => {
               />
             </div>
             <div>
-              <Button className={styles.button} size={'large'} onClick={() => {login(user)}}>
+              <Button
+                className={styles.button}
+                size={'large'}
+                onClick={() => {
+                  login(user);
+                }}>
                 Sign In
               </Button>
             </div>
