@@ -1,6 +1,7 @@
+import { call, put, takeEvery } from 'redux-saga/effects';
 import { Action, createActions, handleActions } from 'redux-actions';
-import { put, takeEvery } from 'redux-saga/effects';
 import { loginData } from '../../components/signIn';
+import UserSerVice from '../../service/userService';
 
 interface AuthState {
   token: string | null;
@@ -56,7 +57,13 @@ export const { login, logout } = createActions('LOGIN', 'LOGOUT', { prefix });
 function* loginSaga(action: Action<loginData>) {
   try {
     yield put(pending());
-  } catch (e) {}
+    const token: string = yield call(UserSerVice.login, action.payload);
+    //localStorage.setItem()
+    yield put(success(token));
+    // push
+  } catch (error: any) {
+    yield put(fail(new Error(error?.response?.data?.error || 'UNKNOWN_ERROR')));
+  }
 }
 function* logoutSaga() {}
 export function* authSaga() {

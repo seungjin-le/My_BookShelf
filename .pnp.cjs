@@ -57,6 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router-dom", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:6.3.0"],\
             ["react-scripts", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:5.0.1"],\
             ["redux", "npm:4.2.0"],\
+            ["redux-actions", "npm:2.6.5"],\
             ["redux-devtools-extension", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:2.13.9"],\
             ["redux-saga", "npm:1.2.1"],\
             ["sass", "npm:1.54.5"],\
@@ -9951,6 +9952,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["invariant", [\
+        ["npm:2.2.4", {\
+          "packageLocation": "./.yarn/cache/invariant-npm-2.2.4-717fbdb119-cc3182d793.zip/node_modules/invariant/",\
+          "packageDependencies": [\
+            ["invariant", "npm:2.2.4"],\
+            ["loose-envify", "npm:1.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ip", [\
         ["npm:1.1.5", {\
           "packageLocation": "./.yarn/cache/ip-npm-1.1.5-af36318aa6-30133981f0.zip/node_modules/ip/",\
@@ -11232,6 +11243,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsx-ast-utils", "npm:3.2.2"],\
             ["array-includes", "npm:3.1.4"],\
             ["object.assign", "npm:4.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["just-curry-it", [\
+        ["npm:3.2.1", {\
+          "packageLocation": "./.yarn/cache/just-curry-it-npm-3.2.1-472c935340-21b7bd6aac.zip/node_modules/just-curry-it/",\
+          "packageDependencies": [\
+            ["just-curry-it", "npm:3.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15913,6 +15933,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router-dom", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:6.3.0"],\
             ["react-scripts", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:5.0.1"],\
             ["redux", "npm:4.2.0"],\
+            ["redux-actions", "npm:2.6.5"],\
             ["redux-devtools-extension", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:2.13.9"],\
             ["redux-saga", "npm:1.2.1"],\
             ["sass", "npm:1.54.5"],\
@@ -15980,6 +16001,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["reduce-reducers", [\
+        ["npm:0.4.3", {\
+          "packageLocation": "./.yarn/cache/reduce-reducers-npm-0.4.3-f8fda892fc-6e33cafc4e.zip/node_modules/reduce-reducers/",\
+          "packageDependencies": [\
+            ["reduce-reducers", "npm:0.4.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["redux", [\
         ["npm:4.1.2", {\
           "packageLocation": "./.yarn/cache/redux-npm-4.1.2-04cdbe7a08-6a839cee5b.zip/node_modules/redux/",\
@@ -15994,6 +16024,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["redux", "npm:4.2.0"],\
             ["@babel/runtime", "npm:7.17.9"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["redux-actions", [\
+        ["npm:2.6.5", {\
+          "packageLocation": "./.yarn/cache/redux-actions-npm-2.6.5-afed173c83-677a727d0b.zip/node_modules/redux-actions/",\
+          "packageDependencies": [\
+            ["redux-actions", "npm:2.6.5"],\
+            ["invariant", "npm:2.2.4"],\
+            ["just-curry-it", "npm:3.2.1"],\
+            ["loose-envify", "npm:1.4.0"],\
+            ["reduce-reducers", "npm:0.4.3"],\
+            ["to-camel-case", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17527,11 +17571,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["to-camel-case", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/to-camel-case-npm-1.0.0-2e7e71c9af-2f74cfcffa.zip/node_modules/to-camel-case/",\
+          "packageDependencies": [\
+            ["to-camel-case", "npm:1.0.0"],\
+            ["to-space-case", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["to-fast-properties", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/to-fast-properties-npm-2.0.0-0dc60cc481-be2de62fe5.zip/node_modules/to-fast-properties/",\
           "packageDependencies": [\
             ["to-fast-properties", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["to-no-case", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/to-no-case-npm-1.0.2-2d005c2291-1d85326eeb.zip/node_modules/to-no-case/",\
+          "packageDependencies": [\
+            ["to-no-case", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17542,6 +17605,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["to-regex-range", "npm:5.0.1"],\
             ["is-number", "npm:7.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["to-space-case", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/to-space-case-npm-1.0.0-6bc33e5f5c-157cebe3e9.zip/node_modules/to-space-case/",\
+          "packageDependencies": [\
+            ["to-space-case", "npm:1.0.0"],\
+            ["to-no-case", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
