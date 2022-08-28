@@ -1,4 +1,3 @@
-import React from 'react';
 import { routerMiddleware } from 'connected-react-router';
 import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -9,9 +8,8 @@ import history from '../history';
 
 const create = () => {
   const sagaMiddleware = createSagaMiddleware();
-  // noinspection JSDeprecatedSymbols
   const store = createStore(
-    reducer,
+    reducer(history),
     composeWithDevTools(
       applyMiddleware(sagaMiddleware, routerMiddleware(history))
     )

@@ -3,6 +3,7 @@ import { Action, createActions, handleActions } from 'redux-actions';
 import { loginData } from '../../components/signIn';
 import UserSerVice from '../../service/userService';
 import TokenService from '../../service/tokenService';
+import { push } from 'connected-react-router';
 
 interface AuthState {
   token: string | null;
@@ -61,6 +62,8 @@ function* loginSaga(action: Action<loginData>) {
     const token: string = yield call(UserSerVice.login, action.payload);
     TokenService.set(token);
     yield put(success(token));
+    yield put(push('/'));
+
     // push
   } catch (error: any) {
     yield put(fail(new Error(error?.response?.data?.error || 'UNKNOWN_ERROR')));
