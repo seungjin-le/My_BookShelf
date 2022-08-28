@@ -49,7 +49,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/redux-saga", "npm:0.10.5"],\
             ["antd", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:4.22.8"],\
             ["axios", "npm:0.27.2"],\
+            ["connected-react-router", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:6.9.3"],\
             ["eslint-config-react-app", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:6.0.0"],\
+            ["history", "npm:5.3.0"],\
             ["pretty", "npm:2.0.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:18.2.0"],\
@@ -6759,6 +6761,48 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["connected-react-router", [\
+        ["npm:6.9.3", {\
+          "packageLocation": "./.yarn/cache/connected-react-router-npm-6.9.3-87a887faf3-047a11c2f3.zip/node_modules/connected-react-router/",\
+          "packageDependencies": [\
+            ["connected-react-router", "npm:6.9.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:6.9.3", {\
+          "packageLocation": "./.yarn/__virtual__/connected-react-router-virtual-01411887c6/0/cache/connected-react-router-npm-6.9.3-87a887faf3-047a11c2f3.zip/node_modules/connected-react-router/",\
+          "packageDependencies": [\
+            ["connected-react-router", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:6.9.3"],\
+            ["@types/history", null],\
+            ["@types/react", "npm:18.0.17"],\
+            ["@types/react-redux", "npm:7.1.24"],\
+            ["@types/react-router", "npm:5.1.18"],\
+            ["@types/redux", null],\
+            ["history", "npm:5.3.0"],\
+            ["immutable", "npm:4.1.0"],\
+            ["lodash.isequalwith", "npm:4.4.0"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-redux", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:8.0.2"],\
+            ["react-router", null],\
+            ["redux", "npm:4.2.0"],\
+            ["seamless-immutable", "npm:7.1.4"]\
+          ],\
+          "packagePeers": [\
+            "@types/history",\
+            "@types/react-redux",\
+            "@types/react-router",\
+            "@types/react",\
+            "@types/redux",\
+            "history",\
+            "react-redux",\
+            "react-router",\
+            "react",\
+            "redux"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["console-control-strings", [\
         ["npm:1.1.0", {\
           "packageLocation": "./.yarn/cache/console-control-strings-npm-1.1.0-e3160e5275-8755d76787.zip/node_modules/console-control-strings/",\
@@ -11439,6 +11483,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["lodash.isequalwith", [\
+        ["npm:4.4.0", {\
+          "packageLocation": "./.yarn/cache/lodash.isequalwith-npm-4.4.0-128278c097-428ba7a57c.zip/node_modules/lodash.isequalwith/",\
+          "packageDependencies": [\
+            ["lodash.isequalwith", "npm:4.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["lodash.memoize", [\
         ["npm:4.1.2", {\
           "packageLocation": "./.yarn/cache/lodash.memoize-npm-4.1.2-0e6250041f-9ff3942fee.zip/node_modules/lodash.memoize/",\
@@ -15925,7 +15978,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/redux-saga", "npm:0.10.5"],\
             ["antd", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:4.22.8"],\
             ["axios", "npm:0.27.2"],\
+            ["connected-react-router", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:6.9.3"],\
             ["eslint-config-react-app", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:6.0.0"],\
+            ["history", "npm:5.3.0"],\
             ["pretty", "npm:2.0.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:7945b73aab4c1635203342754c8930e19679dd1d096e93bda8c48c8d64b69b985a5541911ed2e61b79ab09842413187ef44af37a4f8b2cb5c38088e519eddcef#npm:18.2.0"],\
@@ -16566,6 +16621,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["scroll-into-view-if-needed", "npm:2.2.29"],\
             ["compute-scroll-into-view", "npm:1.0.17"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["seamless-immutable", [\
+        ["npm:7.1.4", {\
+          "packageLocation": "./.yarn/cache/seamless-immutable-npm-7.1.4-107e4aec08-f65c1dc12e.zip/node_modules/seamless-immutable/",\
+          "packageDependencies": [\
+            ["seamless-immutable", "npm:7.1.4"]\
           ],\
           "linkType": "HARD"\
         }]\
