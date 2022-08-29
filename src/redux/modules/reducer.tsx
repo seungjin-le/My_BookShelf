@@ -3,9 +3,9 @@ import auth from './auth';
 import { connectRouter } from 'connected-react-router';
 import { History } from 'history';
 
-const reducer: any = (history: History | object) =>
+const reducer = (history: History) =>
   combineReducers({
-    auth,
     router: connectRouter(history),
+    auth,
   });
 export default reducer;

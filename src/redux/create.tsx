@@ -24,6 +24,7 @@ const create = () => {
     )
   );
   sagaMiddleware.run(rootSaga);
+
   return store;
 };
 

@@ -1485,7 +1485,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.1, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.11.1, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.18.0, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.7.6":
+"@babel/runtime@npm:^7.10.1, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.11.1, @babel/runtime@npm:^7.18.0, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.6.3, @babel/runtime@npm:^7.7.6":
   version: 7.18.9
   resolution: "@babel/runtime@npm:7.18.9"
   dependencies:
@@ -1494,7 +1494,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.6.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.17.9
   resolution: "@babel/runtime@npm:7.17.9"
   dependencies:
@@ -2584,14 +2584,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/history@npm:^4.7.11":
-  version: 4.7.11
-  resolution: "@types/history@npm:4.7.11"
-  checksum: c92e2ba407dcab0581a9afdf98f533aa41b61a71133420a6d92b1ca9839f741ab1f9395b17454ba5b88cb86020b70b22d74a1950ccfbdfd9beeaa5459fdc3464
+"@types/history@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@types/history@npm:5.0.0"
+  dependencies:
+    history: "*"
+  checksum: 53d35a7b3b7425dd1bac33ea024e3446eb9b8b1a390fef9bedb9428a6cfe84d9716d69c74364068dfca082abbbc5d5d126c5472ee5507150c4f55127422b5462
   languageName: node
   linkType: hard
 
-"@types/hoist-non-react-statics@npm:^3.3.0, @types/hoist-non-react-statics@npm:^3.3.1":
+"@types/hoist-non-react-statics@npm:^3.3.0":
   version: 3.3.1
   resolution: "@types/hoist-non-react-statics@npm:3.3.1"
   dependencies:
@@ -2778,27 +2780,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-router-dom@npm:^5.3.3":
-  version: 5.3.3
-  resolution: "@types/react-router-dom@npm:5.3.3"
-  dependencies:
-    "@types/history": ^4.7.11
-    "@types/react": "*"
-    "@types/react-router": "*"
-  checksum: 28c4ea48909803c414bf5a08502acbb8ba414669b4b43bb51297c05fe5addc4df0b8fd00e0a9d1e3535ec4073ef38aaafac2c4a2b95b787167d113bc059beff3
-  languageName: node
-  linkType: hard
-
-"@types/react-router@npm:*, @types/react-router@npm:^5.1.18":
-  version: 5.1.18
-  resolution: "@types/react-router@npm:5.1.18"
-  dependencies:
-    "@types/history": ^4.7.11
-    "@types/react": "*"
-  checksum: f08b37ee822f9f9ff904ffd0778fe2bb7c717ed3ee311610382ee024d02a35169bd3301ecde863cac21aae8fdee919501e8ea22bad0260c02c10cfbdba5c71be
-  languageName: node
-  linkType: hard
-
 "@types/react@npm:*":
   version: 18.0.3
   resolution: "@types/react@npm:18.0.3"
@@ -2828,12 +2809,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/redux-devtools-extension@npm:^2.13.2":
+  version: 2.13.2
+  resolution: "@types/redux-devtools-extension@npm:2.13.2"
+  dependencies:
+    redux-devtools-extension: "*"
+  checksum: ae9ab87db0d88476580d80bb09b0b5d6793197c495abc931374b01290761957098f75dfa02dbe3b205b6c2c1185eb188eaa2e2f2d6428a457b8f85fc258f7884
+  languageName: node
+  linkType: hard
+
 "@types/redux-saga@npm:^0.10.5":
   version: 0.10.5
   resolution: "@types/redux-saga@npm:0.10.5"
   dependencies:
     redux-saga: "*"
   checksum: cc628525e06f7fc04696720bb184923512a44562d4da6ef4ea9386b248a4a4a1a80da49b9736c71c01c20d648bbb880ec8e3b4d5158e7b5fa2837b02c2dbf733
+  languageName: node
+  linkType: hard
+
+"@types/redux@npm:^3.6.0":
+  version: 3.6.31
+  resolution: "@types/redux@npm:3.6.31"
+  checksum: 7bfaa5c5390364d8ba4132033f9887f1c1ed96fda434d3f70be801e0997542a89c03dcd656e3bc8a1ea84bb6450e25e833cf17302dbd9055d6ff0e1f1b4f9a31
   languageName: node
   linkType: hard
 
@@ -2908,13 +2905,6 @@ __metadata:
   version: 2.0.2
   resolution: "@types/trusted-types@npm:2.0.2"
   checksum: 3371eef5f1c50e1c3c07a127c1207b262ba65b83dd167a1c460fc1b135a3fb0c97b9f508efebd383f239cc5dd5b7169093686a692a501fde9c3f7208657d9b0d
-  languageName: node
-  linkType: hard
-
-"@types/use-sync-external-store@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@types/use-sync-external-store@npm:0.0.3"
-  checksum: 161ddb8eec5dbe7279ac971531217e9af6b99f7783213566d2b502e2e2378ea19cf5e5ea4595039d730aa79d3d35c6567d48599f69773a02ffcff1776ec2a44e
   languageName: node
   linkType: hard
 
@@ -6746,7 +6736,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"history@npm:^5.2.0, history@npm:^5.3.0":
+"history@npm:*, history@npm:^5.2.0":
   version: 5.3.0
   resolution: "history@npm:5.3.0"
   dependencies:
@@ -6755,7 +6745,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.2":
+"hoist-non-react-statics@npm:^3.3.0":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -7119,15 +7109,6 @@ __metadata:
     has: ^1.0.3
     side-channel: ^1.0.4
   checksum: 1944f92e981e47aebc98a88ff0db579fd90543d937806104d0b96557b10c1f170c51fb777b97740a8b6ddeec585fca8c39ae99fd08a8e058dfc8ab70937238bf
-  languageName: node
-  linkType: hard
-
-"invariant@npm:^2.2.4":
-  version: 2.2.4
-  resolution: "invariant@npm:2.2.4"
-  dependencies:
-    loose-envify: ^1.0.0
-  checksum: cc3182d793aad82a8d1f0af697b462939cb46066ec48bbf1707c150ad5fad6406137e91a262022c269702e01621f35ef60269f6c0d7fd178487959809acdfb14
   languageName: node
   linkType: hard
 
@@ -8277,13 +8258,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"just-curry-it@npm:^3.1.0":
-  version: 3.2.1
-  resolution: "just-curry-it@npm:3.2.1"
-  checksum: 21b7bd6aaccfc908a89d16238f6b05408fd83a0489269ca5068bf99bcbc4e98c92afc368d86c64769be8c98580aabf822e00bb4c5c372d1a60619404a92cfbe0
-  languageName: node
-  linkType: hard
-
 "kind-of@npm:^3.0.2":
   version: 3.2.2
   resolution: "kind-of@npm:3.2.2"
@@ -8483,7 +8457,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.0.0, loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -11174,38 +11148,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-redux@npm:^8.0.2":
-  version: 8.0.2
-  resolution: "react-redux@npm:8.0.2"
-  dependencies:
-    "@babel/runtime": ^7.12.1
-    "@types/hoist-non-react-statics": ^3.3.1
-    "@types/use-sync-external-store": ^0.0.3
-    hoist-non-react-statics: ^3.3.2
-    react-is: ^18.0.0
-    use-sync-external-store: ^1.0.0
-  peerDependencies:
-    "@types/react": ^16.8 || ^17.0 || ^18.0
-    "@types/react-dom": ^16.8 || ^17.0 || ^18.0
-    react: ^16.8 || ^17.0 || ^18.0
-    react-dom: ^16.8 || ^17.0 || ^18.0
-    react-native: ">=0.59"
-    redux: ^4
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-    "@types/react-dom":
-      optional: true
-    react-dom:
-      optional: true
-    react-native:
-      optional: true
-    redux:
-      optional: true
-  checksum: 44c1739c45dad04ecc65a290897c73828ff0bf43f2b7618ed5ef6d4ceecedae38e76cecd189a5ecedf579c28ead05427bc000fb45ad30b9fcd5c2be27cd3ac73
-  languageName: node
-  linkType: hard
-
 "react-refresh@npm:^0.11.0":
   version: 0.11.0
   resolution: "react-refresh@npm:0.11.0"
@@ -11226,7 +11168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:6.3.0":
+"react-router@npm:6.3.0, react-router@npm:^6.3.0":
   version: 6.3.0
   resolution: "react-router@npm:6.3.0"
   dependencies:
@@ -11321,32 +11263,28 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.3.0
     "@testing-library/user-event": ^14.4.3
+    "@types/history": ^5.0.0
     "@types/jest": ^28.1.8
     "@types/node": ^18.7.13
     "@types/node-sass": ^4.11.3
     "@types/react": ^18.0.17
     "@types/react-dom": ^18.0.6
     "@types/react-redux": ^7.1.24
-    "@types/react-router": ^5.1.18
-    "@types/react-router-dom": ^5.3.3
+    "@types/redux": ^3.6.0
     "@types/redux-actions": ^2.6.2
+    "@types/redux-devtools-extension": ^2.13.2
     "@types/redux-saga": ^0.10.5
     antd: ^4.22.8
     axios: ^0.27.2
     connected-react-router: ^6.9.3
     eslint-config-react-app: 6
-    history: ^5.3.0
     pretty: ^2.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
     react-error-boundary: ^3.1.4
-    react-redux: ^8.0.2
+    react-router: ^6.3.0
     react-router-dom: ^6.3.0
     react-scripts: 5.0.1
-    redux: ^4.2.0
-    redux-actions: ^2.6.5
-    redux-devtools-extension: ^2.13.9
-    redux-saga: ^1.2.1
     sass: ^1.54.5
     typesafe-actions: ^5.1.0
     typescript: ^4.7.4
@@ -11408,27 +11346,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reduce-reducers@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "reduce-reducers@npm:0.4.3"
-  checksum: 6e33cafc4e7c67e8973fbde543839c3efd982a712a4fb15f6cdf45072a9fa2c17aef1f9a44330665a2c351ac7ebbb8a47afcec2932ee486c72cfd04ed1e2ad0c
-  languageName: node
-  linkType: hard
-
-"redux-actions@npm:^2.6.5":
-  version: 2.6.5
-  resolution: "redux-actions@npm:2.6.5"
-  dependencies:
-    invariant: ^2.2.4
-    just-curry-it: ^3.1.0
-    loose-envify: ^1.4.0
-    reduce-reducers: ^0.4.3
-    to-camel-case: ^1.0.0
-  checksum: 677a727d0be42aa1cbdb4c8d6296b4167c0c4ce4f28d36453764edba3c4dc5f82064290ce494209fa56eeb245262b4cdc58e7e6a50fe2f17e1d94d79c387e9e3
-  languageName: node
-  linkType: hard
-
-"redux-devtools-extension@npm:^2.13.9":
+"redux-devtools-extension@npm:*":
   version: 2.13.9
   resolution: "redux-devtools-extension@npm:2.13.9"
   peerDependencies:
@@ -11437,7 +11355,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux-saga@npm:*, redux-saga@npm:^1.2.1":
+"redux-saga@npm:*":
   version: 1.2.1
   resolution: "redux-saga@npm:1.2.1"
   dependencies:
@@ -11447,15 +11365,6 @@ __metadata:
   linkType: hard
 
 "redux@npm:^4.0.0, redux@npm:^4.0.4":
-  version: 4.1.2
-  resolution: "redux@npm:4.1.2"
-  dependencies:
-    "@babel/runtime": ^7.9.2
-  checksum: 6a839cee5bd580c5298d968e9e2302150e961318253819bcd97f9d945a5a409559eacddf6026f4118bb68b681c593d90e8a2c5bbf278f014aff9bf0d2d8fa084
-  languageName: node
-  linkType: hard
-
-"redux@npm:^4.2.0":
   version: 4.2.0
   resolution: "redux@npm:4.2.0"
   dependencies:
@@ -12778,26 +12687,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"to-camel-case@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "to-camel-case@npm:1.0.0"
-  dependencies:
-    to-space-case: ^1.0.0
-  checksum: 2f74cfcffa58e8ddede7e01a03eda2cc3f0ab50efdad1d0f1092d55b4e499be43846d1f9087c458fa9efde4958e407738197d65858272c56c915b649b9ca1e62
-  languageName: node
-  linkType: hard
-
 "to-fast-properties@npm:^2.0.0":
   version: 2.0.0
   resolution: "to-fast-properties@npm:2.0.0"
   checksum: be2de62fe58ead94e3e592680052683b1ec986c72d589e7b21e5697f8744cdbf48c266fa72f6c15932894c10187b5f54573a3bcf7da0bfd964d5caf23d436168
-  languageName: node
-  linkType: hard
-
-"to-no-case@npm:^1.0.0":
-  version: 1.0.2
-  resolution: "to-no-case@npm:1.0.2"
-  checksum: 1d85326eeb89f9f3a805bf5b395bcabb8556e882350164c1faa10846076732f4cec02ac95b016e7d6bb2f55e448ce5dd227c7699ec43e387c705a5b2b1ee2963
   languageName: node
   linkType: hard
 
@@ -12807,15 +12700,6 @@ __metadata:
   dependencies:
     is-number: ^7.0.0
   checksum: f76fa01b3d5be85db6a2a143e24df9f60dd047d151062d0ba3df62953f2f697b16fe5dad9b0ac6191c7efc7b1d9dcaa4b768174b7b29da89d4428e64bc0a20ed
-  languageName: node
-  linkType: hard
-
-"to-space-case@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "to-space-case@npm:1.0.0"
-  dependencies:
-    to-no-case: ^1.0.0
-  checksum: 157cebe3e98e7cb465fe1978cf26450cc8ea8e637a01039854fac7ed60ad074e5e18b32333cc5f30df81b81ca374d63df768cd4c1fa0fe672605f965376227f4
   languageName: node
   linkType: hard
 
@@ -13134,15 +13018,6 @@ __metadata:
   dependencies:
     punycode: ^2.1.0
   checksum: 7167432de6817fe8e9e0c9684f1d2de2bb688c94388f7569f7dbdb1587c9f4ca2a77962f134ec90be0cc4d004c939ff0d05acc9f34a0db39a3c797dada262633
-  languageName: node
-  linkType: hard
-
-"use-sync-external-store@npm:^1.0.0":
-  version: 1.2.0
-  resolution: "use-sync-external-store@npm:1.2.0"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
   languageName: node
   linkType: hard
 
