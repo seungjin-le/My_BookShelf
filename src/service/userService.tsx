@@ -1,7 +1,5 @@
-import React from 'react';
-
-import { loginData } from '../components/signIn';
 import axios from 'axios';
+import { loginData } from '../types';
 
 const USER_API_URL = 'https://api.marktube.tv/v1/me';
 

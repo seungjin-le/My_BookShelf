@@ -1,15 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Col, Input, Row } from 'antd';
+import { Button, Col, Row } from 'antd';
 import styles from './signIn.module.scss';
-
-export type loginData = {
-  email: string;
-  password: string;
-};
-
-interface SigInProps {
-  login: (reqData: loginData) => void;
-}
+import { loginData, SigInProps } from '../types';
 
 const SignIn: React.FC<SigInProps> = ({ login }) => {
   const [user, setUser] = useState<loginData>({
@@ -20,12 +12,6 @@ const SignIn: React.FC<SigInProps> = ({ login }) => {
     setUser({
       ...user,
       [target.name]: target.value,
-    });
-  };
-  const click = () => {
-    setUser({
-      email: '',
-      password: '',
     });
   };
   return (

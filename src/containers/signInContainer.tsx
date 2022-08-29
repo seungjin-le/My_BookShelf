@@ -7,7 +7,6 @@ const SignInContainer = () => {
   const dispatch = useDispatch();
   const userLogin = useCallback(
     (reqData: object) => {
-      console.log(reqData);
       dispatch(loginSagaStart(reqData));
     },
     [dispatch]

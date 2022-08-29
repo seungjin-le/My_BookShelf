@@ -1,15 +1,9 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { Action, createActions, handleActions } from 'redux-actions';
-import { loginData } from '../../components/signIn';
 import UserSerVice from '../../service/userService';
 import TokenService from '../../service/tokenService';
 import { push } from 'connected-react-router';
-
-interface AuthState {
-  token: string | null;
-  loading: boolean;
-  error: Error | null;
-}
+import { AuthState, loginData } from '../../types';
 
 const initialState: AuthState = {
   token: null,

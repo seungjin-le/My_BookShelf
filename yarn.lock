@@ -2591,15 +2591,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/history@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "@types/history@npm:5.0.0"
-  dependencies:
-    history: "*"
-  checksum: 53d35a7b3b7425dd1bac33ea024e3446eb9b8b1a390fef9bedb9428a6cfe84d9716d69c74364068dfca082abbbc5d5d126c5472ee5507150c4f55127422b5462
-  languageName: node
-  linkType: hard
-
 "@types/hoist-non-react-statics@npm:^3.3.0, @types/hoist-non-react-statics@npm:^3.3.1":
   version: 3.3.1
   resolution: "@types/hoist-non-react-statics@npm:3.3.1"
@@ -6755,7 +6746,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"history@npm:*, history@npm:^5.2.0, history@npm:^5.3.0":
+"history@npm:^5.2.0, history@npm:^5.3.0":
   version: 5.3.0
   resolution: "history@npm:5.3.0"
   dependencies:
@@ -11330,7 +11321,6 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.3.0
     "@testing-library/user-event": ^14.4.3
-    "@types/history": ^5.0.0
     "@types/jest": ^28.1.8
     "@types/node": ^18.7.13
     "@types/node-sass": ^4.11.3

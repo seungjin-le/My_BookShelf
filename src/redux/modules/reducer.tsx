@@ -3,7 +3,7 @@ import auth from './auth';
 import { connectRouter } from 'connected-react-router';
 import { History } from 'history';
 
-const reducer = (history: History<unknown>) =>
+const reducer: any = (history: History | object) =>
   combineReducers({
     auth,
     router: connectRouter(history),
