@@ -8,9 +8,9 @@ const SignIn = () => {
     (state) => state?.auth?.token
   );
 
-  if (!token) {
-    return <Link to={'/'} />;
-  }
+  //if (!token) {
+  //     return <Link to={'/'} />;
+  //   }
   return <SignInContainer />;
 };
 
