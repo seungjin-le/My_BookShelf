@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Col, Row } from 'antd';
-import styles from './signIn.module.scss';
+import styles from './signIn.module.css';
 import { loginData, SigInProps } from '../types';
 
 const SignIn: React.FC<SigInProps> = ({ login }) => {
@@ -17,16 +17,18 @@ const SignIn: React.FC<SigInProps> = ({ login }) => {
   return (
     <Row align={'middle'} className={styles.signin_row}>
       <Col span={24}>
-        <Row>
+        <Row className={styles.signin_contents}>
           <Col span={12}></Col>
           <Col span={12}>
-            <div>My Books</div>
-            <div>Please Note Your Opinion</div>
-            <div />
-            <div>
-              Email <span> *</span>
+            <div className={styles.signin_title}>My Books</div>
+            <div className={styles.signin_subtitle}>
+              Please Note Your Opinion
             </div>
-            <div>
+            <div className={styles.signin_underline} />
+            <div className={styles.email_title}>
+              Email <span className={styles.required}> *</span>
+            </div>
+            <div className={styles.input_area}>
               <input
                 placeholder={'Email'}
                 type="Email"
@@ -34,12 +36,13 @@ const SignIn: React.FC<SigInProps> = ({ login }) => {
                 name="email"
                 value={user.email}
                 onChange={userOnChange}
+                className={styles.input}
               />
             </div>
-            <div className={styles.signin_title}>
-              Password <span> *</span>
+            <div className={styles.password_title}>
+              Password <span className={styles.required}> *</span>
             </div>
-            <div>
+            <div className={styles.input_area}>
               <input
                 placeholder={'Password'}
                 type="password"
@@ -47,9 +50,10 @@ const SignIn: React.FC<SigInProps> = ({ login }) => {
                 name={'password'}
                 value={user.password}
                 onChange={userOnChange}
+                className={styles.input}
               />
             </div>
-            <div>
+            <div className={styles.button_area}>
               <Button
                 className={styles.button}
                 size={'large'}

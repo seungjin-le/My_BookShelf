@@ -12,13 +12,13 @@ const App = () => {
   return (
     <ErrorBoundary FallbackComponent={Error}>
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="signin" component={SignIn} />
-        <Route path="edit/:id" component={Edit} />
-        <Route path="book/:id" component={Detail} />
-        <Route path="add" component={Add} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/edit/:id" component={Edit} />
+        <Route exact path="/book/:id" component={Detail} />
+        <Route exact path="/add" component={Add} />
         {/* Not Found  */}
-        <Route path={'*'} component={NotFound} />
+        <Route exact path={'*'} component={NotFound} />
       </Switch>
     </ErrorBoundary>
   );

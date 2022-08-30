@@ -5,6 +5,7 @@ export default class TokenService {
     return localStorage.getItem(LOCAL_STORAGE_TOKEN_KEY_NAME);
   }
   public static set(token: string): void {
+    console.log(token);
     return localStorage.setItem(LOCAL_STORAGE_TOKEN_KEY_NAME, token);
   }
   public static remove(): void {

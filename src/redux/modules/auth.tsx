@@ -57,8 +57,6 @@ function* loginSaga(action: Action<loginData>) {
     TokenService.set(token);
     yield put(success(token));
     yield put(push('/'));
-
-    // push
   } catch (error: any) {
     yield put(fail(new Error(error?.response?.data?.error || 'UNKNOWN_ERROR')));
   }
@@ -71,8 +69,6 @@ function* logoutSaga() {
     TokenService.set(token);
     yield put(success(token));
     yield put(push('/'));
-
-    // push
   } catch (error: any) {
   } finally {
     TokenService.remove();
