@@ -3,30 +3,49 @@ import { Button, PageHeader, Table } from 'antd';
 import React, { useEffect } from 'react';
 import { BookType } from '../types';
 import Book from './book';
-
+import styles from './list.module.css';
 interface ListProps {
   books: BookType[] | null;
   loading: boolean;
   getBooks: () => void;
+  error: Error | null;
+  logout: () => void;
 }
 
-const BookList: React.FC<ListProps> = ({ books, loading, getBooks }) => {
+const BookList: React.FC<ListProps> = ({
+  books,
+  loading,
+  getBooks,
+  error,
+  logout,
+}) => {
   useEffect(() => {
     getBooks();
   }, [getBooks]);
+  useEffect(() => {
+    if (error) {
+      logout();
+    }
+  }, [error, logout]);
   const goAdd = () => {};
-  const logout = () => {
-    //dispatch()
-  };
+
   return (
     <Layout>
       <PageHeader
         title={<div>Book List</div>}
         extra={[
-          <Button key={2} type={'primary'} onClick={goAdd}>
+          <Button
+            key={2}
+            type={'primary'}
+            onClick={goAdd}
+            className={styles.button}>
             Add Book
           </Button>,
-          <Button key={1} type={'primary'} onClick={logout}>
+          <Button
+            key={1}
+            type={'primary'}
+            onClick={logout}
+            className={styles.button}>
             Logout
           </Button>,
         ]}
@@ -45,6 +64,7 @@ const BookList: React.FC<ListProps> = ({ books, loading, getBooks }) => {
         showHeader={false}
         rowKey={'bookId'}
         pagination={false}
+        className={styles.table}
       />
     </Layout>
   );
