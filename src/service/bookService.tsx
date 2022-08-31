@@ -1,7 +1,7 @@
 import { BookType } from '../types';
 import axios from 'axios';
 
-const BOOK_API_URL = 'https://api.marktube.tv/api/book';
+const BOOK_API_URL = 'https://api.marktube.tv/v1/book';
 
 export default class BookService {
   public static async getBooks(token: string): Promise<BookType[]> {
