@@ -1,13 +1,9 @@
-import { useSelector } from 'react-redux';
-import { RootState } from '../../types';
-
 import { Redirect } from 'react-router';
 import ListContainer from '../../containers/listContainer';
+import useToken from '../../hooks/useToken';
 
 const Home = () => {
-  const token = useSelector<RootState, string | null>(
-    (state) => state?.auth?.token
-  );
+  const token = useToken();
   if (!token) {
     return <Redirect to={'/signin'} />;
   }

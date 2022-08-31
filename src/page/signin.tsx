@@ -1,12 +1,9 @@
 import SignInContainer from '../containers/signInContainer';
-import { useSelector } from 'react-redux';
-import { RootState } from '../types';
 import { Redirect } from 'react-router';
+import useToken from '../hooks/useToken';
 
 const SignIn = () => {
-  const token = useSelector<RootState, string | null>(
-    (state) => state?.auth?.token
-  );
+  const token = useToken();
 
   if (token) {
     return <Redirect to={'/'} />;
