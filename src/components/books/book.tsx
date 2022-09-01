@@ -10,10 +10,10 @@ import { BookType } from '../../types';
 import moment from 'moment';
 import { Button, Tooltip } from 'antd';
 import styles from '../styles/books/book.module.css';
-import { useHistory } from 'react-router';
 
 interface BookProps extends BookType {
   deleteBook: (bookId: number) => void;
+  goEdit: (bookId: number) => void;
 }
 
 const Book: React.FC<BookProps> = ({
@@ -23,14 +23,13 @@ const Book: React.FC<BookProps> = ({
   createAt,
   url,
   deleteBook,
+  goEdit,
 }) => {
-  const history = useHistory();
-
   const clickDelete = () => {
     deleteBook(bookId);
   };
-  const testclick = () => {
-    history.push(`/edit/${bookId}`);
+  const clickEdit = () => {
+    goEdit(bookId);
   };
   return (
     <div className={styles.book}>
@@ -69,7 +68,7 @@ const Book: React.FC<BookProps> = ({
             shape="circle"
             icon={<EditOutlined />}
             className={styles.button_edit}
-            onClick={testclick}
+            onClick={clickEdit}
           />
         </Tooltip>
         <Tooltip title={'Delete'}>

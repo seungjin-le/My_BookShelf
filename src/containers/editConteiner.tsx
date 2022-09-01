@@ -1,13 +1,19 @@
 import React, { useCallback } from 'react';
 import Edit from '../components/books/edit';
 import { useDispatch, useSelector } from 'react-redux';
-import { BookReqType, RootState } from '../types';
+import { BookReqType, BookType, RootState } from '../types';
 import { logout as logoutSagaStart } from '../redux/modules/auth';
 import { goBack } from 'connected-react-router';
-import { addBook as addBookSagaStart } from '../redux/modules/books';
+import { editGetBooksSaga as editGetBookSagaStart } from '../redux/modules/books';
+import { useParams } from 'react-router';
 
 const EditContainer = () => {
   const dispatch = useDispatch();
+  const bookId = useParams();
+  console.log();
+  const book = useCallback(() => {
+    dispatch(editGetBookSagaStart(6769));
+  }, [dispatch]);
   const loading = useSelector<RootState, boolean>(
     (state) => state.books.loading
   );
@@ -19,13 +25,13 @@ const EditContainer = () => {
     dispatch(goBack());
   }, [dispatch]);
 
-  const add = useCallback(
-    (back: BookReqType) => {
-      dispatch(addBookSagaStart(back));
+  const edit = useCallback(
+    (book: BookReqType) => {
+      //dispatch(editBookSaga(bookId));
     },
     [dispatch]
   );
-  return <Edit loading={loading} logout={logout} back={back} add={add} />;
+  return <Edit loading={loading} logout={logout} back={back} edit={edit} />;
 };
 
 export default EditContainer;

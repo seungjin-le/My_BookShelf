@@ -62,7 +62,7 @@ const BookList: React.FC<ListProps> = ({
             dataIndex: 'book',
             key: 'book',
             render: (text, record) => (
-              <Book {...record} deleteBook={deleteBook} />
+              <Book {...record} deleteBook={deleteBook} goEdit={goEdit} />
             ),
           },
         ]}

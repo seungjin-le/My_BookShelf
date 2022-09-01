@@ -46,6 +46,7 @@ export const { getBooks, addBook, deleteBook } = createActions(
   'GET_BOOKS',
   'ADD_BOOK',
   'DELETE_BOOK',
+  'EDIT_GET_BOOK',
   {
     prefix,
   }
@@ -90,8 +91,22 @@ function* deleteBookSaga(action: Action<number>) {
   }
 }
 
+function* editGetBooksSaga(action: Action<number>) {
+  try {
+    const bookId = action.payload;
+    yield put(pending());
+    const token: string = yield select((state) => state.auth.token);
+    const books: BookType[] = yield call(BookService.getBooks, token);
+    const book: BookType[] = books.filter((book) => book.bookId === bookId);
+    yield put(success(...book));
+  } catch (error: any) {
+    yield put(fail(new Error(error.response?.data?.error || 'UNKNOWN_ERROR')));
+  }
+}
+
 export function* booksSaga() {
   yield takeLatest(`${prefix}/GET_BOOKS`, getBooksSaga);
   yield takeLatest(`${prefix}/ADD_BOOK`, addBookSaga);
   yield takeLatest(`${prefix}/DELETE_BOOK`, deleteBookSaga);
+  yield takeLatest(`${prefix}/EDIT_GET_BOOK`, editGetBooksSaga);
 }

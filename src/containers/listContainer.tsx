@@ -11,7 +11,6 @@ import { useHistory } from 'react-router';
 
 const ListContainer = () => {
   const history = useHistory();
-
   const dispatch = useDispatch();
   const books = useSelector<RootState, BookType[] | null>(
     (state) => state.books.books
@@ -40,7 +39,7 @@ const ListContainer = () => {
   );
   const goEdit = useCallback(
     (bookId: number) => {
-      history.push(`/edit/:${bookId}`);
+      history.push(`/edit/${bookId}`);
     },
     [history]
   );
@@ -52,8 +51,8 @@ const ListContainer = () => {
       error={error}
       logout={logout}
       goAdd={goAdd}
-      goEdit={goEdit}
       deleteBook={deleteBook}
+      goEdit={goEdit}
     />
   );
 };

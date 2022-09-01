@@ -8,21 +8,19 @@ import styles from '../styles/books/add.module.css';
 import TextAreaType from 'rc-textarea';
 import { BookReqType } from '../../types';
 import { message as messageDialog } from 'antd';
-import { useHistory } from 'react-router';
 
 interface EditProps {
   loading: boolean;
   back: () => void;
   logout: () => void;
-  add: (book: BookReqType) => void;
+  edit: (book: BookReqType) => void;
 }
 
-const Edit: React.FC<EditProps> = ({ loading, back, logout, add }) => {
+const Edit: React.FC<EditProps> = ({ loading, back, logout, edit }) => {
   const titleRef = useRef<InputRef>(null);
   const messageRef = useRef<TextAreaType>(null);
   const authorRef = useRef<InputRef>(null);
   const urlRef = useRef<InputRef>(null);
-  const history = useHistory();
 
   const click = () => {
     const title = titleRef.current!.input!.value;
@@ -105,7 +103,7 @@ const Edit: React.FC<EditProps> = ({ loading, back, logout, add }) => {
             loading={loading}
             onClick={click}>
             {' '}
-            Add
+            Edit
           </Button>
         </div>
       </div>
