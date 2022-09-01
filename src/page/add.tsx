@@ -5,7 +5,6 @@ import useToken from '../hooks/useToken';
 
 const Add = () => {
   const token = useToken();
-  console.log(token);
   if (!token) {
     return <Redirect to={'/signin'} />;
   }

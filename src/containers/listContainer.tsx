@@ -4,8 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BookType, RootState } from '../types';
 import { getBooks as getBooksSagaStart } from '../redux/modules/books';
 import { logout as logoutSagaStart } from '../redux/modules/auth';
-import { push } from 'connected-react-router';
+
+import { useHistory } from 'react-router';
 const ListContainer = () => {
+  const history = useHistory();
+
   const dispatch = useDispatch();
   const books = useSelector<RootState, BookType[] | null>(
     (state) => state.books.books
@@ -24,8 +27,8 @@ const ListContainer = () => {
     dispatch(getBooksSagaStart());
   }, [dispatch]);
   const goAdd = useCallback(() => {
-    dispatch(push('/add'));
-  }, [dispatch]);
+    history.push('/add');
+  }, [history]);
 
   return (
     <BookList
