@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import SignIn from '../components/signIn';
+import SignIn from '../components/signin/signIn';
 import { useDispatch } from 'react-redux';
 import { login as loginSagaStart } from '../redux/modules/auth';
 

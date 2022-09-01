@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './layout.module.css';
+import styles from '../styles/layout/layout.module.css';
 
 type Children = {
   children: React.ReactNode | React.ReactNode[];

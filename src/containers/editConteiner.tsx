@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
-import Add from '../components/books/add';
+import Edit from '../components/books/edit';
 import { useDispatch, useSelector } from 'react-redux';
-import { BookReqType, BookType, RootState } from '../types';
-import { goBack } from 'connected-react-router';
+import { BookReqType, RootState } from '../types';
 import { logout as logoutSagaStart } from '../redux/modules/auth';
+import { goBack } from 'connected-react-router';
 import { addBook as addBookSagaStart } from '../redux/modules/books';
-const AddContainer = () => {
+
+const EditContainer = () => {
   const dispatch = useDispatch();
   const loading = useSelector<RootState, boolean>(
     (state) => state.books.loading
@@ -24,8 +25,7 @@ const AddContainer = () => {
     },
     [dispatch]
   );
-
-  return <Add loading={loading} logout={logout} back={back} add={add} />;
+  return <Edit loading={loading} logout={logout} back={back} add={add} />;
 };
 
-export default AddContainer;
+export default EditContainer;

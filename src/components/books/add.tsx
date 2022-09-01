@@ -1,12 +1,12 @@
 import PageHeader from 'antd/lib/page-header';
 import React, { useRef } from 'react';
-import Layout from './layout';
+import Layout from '../layout/layout';
 import { ForkOutlined } from '@ant-design/icons';
 import { Button, Input, InputRef } from 'antd';
 import TextArea from 'antd/lib/input/TextArea';
-import styles from './add.module.css';
+import styles from '../styles/books/add.module.css';
 import TextAreaType from 'rc-textarea';
-import { BookReqType } from '../types';
+import { BookReqType } from '../../types';
 import { message as messageDialog } from 'antd';
 import { useHistory } from 'react-router';
 

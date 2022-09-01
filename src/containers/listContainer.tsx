@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import BookList from '../components/bookList';
+import BookList from '../components/books/bookList';
 import { useDispatch, useSelector } from 'react-redux';
 import { BookType, RootState } from '../types';
 import {
@@ -38,6 +38,12 @@ const ListContainer = () => {
     },
     [dispatch]
   );
+  const goEdit = useCallback(
+    (bookId: number) => {
+      history.push(`/edit/:${bookId}`);
+    },
+    [history]
+  );
   return (
     <BookList
       books={books}
@@ -46,6 +52,7 @@ const ListContainer = () => {
       error={error}
       logout={logout}
       goAdd={goAdd}
+      goEdit={goEdit}
       deleteBook={deleteBook}
     />
   );

@@ -1,9 +1,9 @@
-import Layout from './layout';
+import Layout from '../layout/layout';
 import { Button, PageHeader, Table } from 'antd';
 import React, { useEffect } from 'react';
-import { BookType } from '../types';
+import { BookType } from '../../types';
 import Book from './book';
-import styles from './list.module.css';
+import styles from '../styles/books/list.module.css';
 interface ListProps {
   books: BookType[] | null;
   loading: boolean;
@@ -11,6 +11,7 @@ interface ListProps {
   error: Error | null;
   logout: () => void;
   goAdd: () => void;
+  goEdit: (bookId: number) => void;
   deleteBook: (bookId: number) => void;
 }
 
@@ -22,6 +23,7 @@ const BookList: React.FC<ListProps> = ({
   logout,
   goAdd,
   deleteBook,
+  goEdit,
 }) => {
   useEffect(() => {
     getBooks();

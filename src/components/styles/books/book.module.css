@@ -120,7 +120,7 @@ COPY
   font-family: Roboto;
   margin-left: 40px;
   margin-right: 40px;
-  min-height: 100;
+  min-height: 100px;
 }
 
 .button_area {

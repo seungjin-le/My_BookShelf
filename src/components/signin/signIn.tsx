@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Col, Row } from 'antd';
-import styles from './signIn.module.css';
-import { loginData, SigInProps } from '../types';
+import styles from '../styles/signin/signIn.module.css';
+import { loginData, SigInProps } from '../../types';
 
 const SignIn: React.FC<SigInProps> = ({ login }) => {
   const [user, setUser] = useState<loginData>({
@@ -20,7 +20,7 @@ const SignIn: React.FC<SigInProps> = ({ login }) => {
         <Row className={styles.signin_contents}>
           <Col span={12}>
             <img
-              src="/bookImage.png"
+              src="/public/bookImage.png"
               alt="BookImage"
               className={styles.signin_bg}
             />
