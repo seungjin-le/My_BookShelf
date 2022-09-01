@@ -24,4 +24,14 @@ export default class BookService {
     });
     return data;
   }
+  public static async deleteBook(token: string, bookId: number) {
+    await axios
+      .delete(`${BOOK_API_URL}/${bookId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => console.log(res))
+      .catch((e) => console.log(e));
+  }
 }

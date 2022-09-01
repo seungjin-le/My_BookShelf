@@ -11,6 +11,7 @@ interface ListProps {
   error: Error | null;
   logout: () => void;
   goAdd: () => void;
+  deleteBook: (bookId: number) => void;
 }
 
 const BookList: React.FC<ListProps> = ({
@@ -20,6 +21,7 @@ const BookList: React.FC<ListProps> = ({
   error,
   logout,
   goAdd,
+  deleteBook,
 }) => {
   useEffect(() => {
     getBooks();
@@ -57,7 +59,9 @@ const BookList: React.FC<ListProps> = ({
             title: 'test',
             dataIndex: 'book',
             key: 'book',
-            render: (text, record) => <Book {...record} />,
+            render: (text, record) => (
+              <Book {...record} deleteBook={deleteBook} />
+            ),
           },
         ]}
         loading={books === null || loading}

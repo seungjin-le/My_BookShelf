@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import Add from '../components/add';
 import { useDispatch, useSelector } from 'react-redux';
-import { BookReqType, RootState } from '../types';
+import { BookReqType, BookType, RootState } from '../types';
 import { goBack } from 'connected-react-router';
 import { logout as logoutSagaStart } from '../redux/modules/auth';
 import { addBook as addBookSagaStart } from '../redux/modules/books';

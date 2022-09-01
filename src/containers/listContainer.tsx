@@ -2,10 +2,13 @@ import React, { useCallback } from 'react';
 import BookList from '../components/bookList';
 import { useDispatch, useSelector } from 'react-redux';
 import { BookType, RootState } from '../types';
-import { getBooks as getBooksSagaStart } from '../redux/modules/books';
+import {
+  deleteBook as deleteBookSagaStart,
+  getBooks as getBooksSagaStart,
+} from '../redux/modules/books';
 import { logout as logoutSagaStart } from '../redux/modules/auth';
-
 import { useHistory } from 'react-router';
+
 const ListContainer = () => {
   const history = useHistory();
 
@@ -29,7 +32,12 @@ const ListContainer = () => {
   const goAdd = useCallback(() => {
     history.push('/add');
   }, [history]);
-
+  const deleteBook = useCallback(
+    (bookId: number) => {
+      dispatch(deleteBookSagaStart(bookId));
+    },
+    [dispatch]
+  );
   return (
     <BookList
       books={books}
@@ -38,6 +46,7 @@ const ListContainer = () => {
       error={error}
       logout={logout}
       goAdd={goAdd}
+      deleteBook={deleteBook}
     />
   );
 };
