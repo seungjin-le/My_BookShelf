@@ -5,7 +5,10 @@ import { BookReqType, BookType, idParams, RootState } from '../types';
 import { logout as logoutSagaStart } from '../redux/modules/auth';
 import { goBack } from 'connected-react-router';
 import { useParams } from 'react-router';
-import { getBooks as getBooksSagaStart } from '../redux/modules/books';
+import {
+  getBooks as getBooksSagaStart,
+  editBook as editBookSageStart,
+} from '../redux/modules/books';
 
 const EditContainer = () => {
   const dispatch = useDispatch();
@@ -32,7 +35,7 @@ const EditContainer = () => {
 
   const edit = useCallback(
     (book: BookReqType) => {
-      //dispatch(editBookSaga(bookId));
+      dispatch(editBookSageStart(book));
     },
     [dispatch]
   );

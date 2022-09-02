@@ -1,11 +1,10 @@
 import PageHeader from 'antd/lib/page-header';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../layout/layout';
 import { ForkOutlined } from '@ant-design/icons';
-import { Button, Input, InputRef } from 'antd';
+import { Button, Input } from 'antd';
 import TextArea from 'antd/lib/input/TextArea';
 import styles from '../styles/books/add.module.css';
-import TextAreaType from 'rc-textarea';
 import { BookReqType, BookType } from '../../types';
 import { message as messageDialog } from 'antd';
 
@@ -19,10 +18,6 @@ interface EditProps {
 }
 interface EditBookData extends BookReqType {
   bookId: number;
-  ownerId: string;
-  createdAt: string;
-  updatedAt: string;
-  deletedAt: string;
 }
 const Edit: React.FC<EditProps> = ({
   loading,
@@ -35,21 +30,15 @@ const Edit: React.FC<EditProps> = ({
   const [bookData, setBookData] = useState<EditBookData>({
     bookId: 0,
     title: '',
-    ownerId: '',
-    createdAt: '',
-    updatedAt: '',
-    deletedAt: '',
     message: '',
     author: '',
     url: '',
   });
-  const titleRef = useRef<InputRef>(null);
-  const messageRef = useRef<TextAreaType>(null);
-  const authorRef = useRef<InputRef>(null);
-  const urlRef = useRef<InputRef>(null);
 
   useEffect(() => {
     getBooks();
+  }, [getBooks]);
+  useEffect(() => {
     setBookData({
       ...bookData,
       bookId: book?.bookId || 0,
@@ -58,12 +47,10 @@ const Edit: React.FC<EditProps> = ({
       author: book?.author || '',
       url: book?.url || '',
     });
-  }, [getBooks]);
+  }, [book]);
 
-  console.log(book);
   const onChange = ({ target }: any) => {
     const { id, value } = target;
-    console.log(id, value);
     setBookData({
       ...bookData,
       [id]: value,
@@ -76,7 +63,7 @@ const Edit: React.FC<EditProps> = ({
       return messageDialog.error('책 정보를 입력해 주세요');
 
     messageDialog.success('책 수정 완료');
-    //edit({ title: title, message: message, author: author, url: url });
+    edit(bookData);
   };
   return (
     <Layout>

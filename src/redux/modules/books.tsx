@@ -2,7 +2,7 @@ import { Action, createActions, handleActions } from 'redux-actions';
 import { call, put, select, takeLatest } from 'redux-saga/effects';
 import { BookReqType, BooksState, BookType } from '../../types';
 import BookService from '../../service/bookService';
-import { push } from 'connected-react-router';
+import { useHistory as UseHistory } from 'react-router';
 
 const initialState: BooksState = {
   books: null,
@@ -42,11 +42,11 @@ export default reducer;
 
 //saga
 
-export const { getBooks, addBook, deleteBook, editGetBook } = createActions(
+export const { getBooks, addBook, deleteBook, editBook } = createActions(
   'GET_BOOKS',
   'ADD_BOOK',
   'DELETE_BOOK',
-  'EDIT_GET_BOOK',
+  'EDIT_BOOK',
   {
     prefix,
   }
@@ -63,6 +63,7 @@ function* getBooksSaga() {
   }
 }
 function* addBookSaga(action: Action<BookReqType>) {
+  const History = UseHistory();
   try {
     yield put(pending());
     const token: string = yield select((state) => state.auth.token);
@@ -73,7 +74,7 @@ function* addBookSaga(action: Action<BookReqType>) {
     );
     const books: BookType[] = yield select((state) => state.books.books);
     yield put(success([...books, book]));
-    yield put(push('/'));
+    History.push('/');
   } catch (error: any) {
     yield put(fail(new Error(error.response?.data?.error || 'UNKNOWN_ERROR')));
   }
@@ -91,13 +92,13 @@ function* deleteBookSaga(action: Action<number>) {
   }
 }
 
-function* editGetBooksSaga(action: Action<number>) {
+function* editBooksSaga(action: Action<BookReqType>) {
   try {
     yield put(pending());
-    const bookId = action.payload;
-    //const token: string = yield select((state) => state.auth.token);
     const books: BookType[] = yield select((state) => state.books.books);
-    yield put(success(...books.filter((book) => book.bookId === bookId)));
+    const token: string = yield select((state) => state.auth.token);
+    yield call(BookService.editBook, token, action.payload);
+    yield put(success(books));
   } catch (error: any) {
     yield put(fail(new Error(error.response?.data?.error || 'UNKNOWN_ERROR')));
   }
@@ -107,5 +108,5 @@ export function* booksSaga() {
   yield takeLatest(`${prefix}/GET_BOOKS`, getBooksSaga);
   yield takeLatest(`${prefix}/ADD_BOOK`, addBookSaga);
   yield takeLatest(`${prefix}/DELETE_BOOK`, deleteBookSaga);
-  yield takeLatest(`${prefix}/EDIT_GET_BOOK`, editGetBooksSaga);
+  yield takeLatest(`${prefix}/EDIT_BOOK`, editBooksSaga);
 }

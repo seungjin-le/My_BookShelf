@@ -16,7 +16,6 @@ export default class BookService {
     token: string,
     book: BookReqType
   ): Promise<BookType> {
-    console.log(book);
     const { data } = await axios.post(BOOK_API_URL, book, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -33,5 +32,13 @@ export default class BookService {
       })
       .then((res) => console.log(res))
       .catch((e) => console.log(e));
+  }
+  public static async editBook(token: string, book: BookReqType) {
+    console.log(token, book);
+    await axios.put(BOOK_API_URL, book, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
   }
 }
