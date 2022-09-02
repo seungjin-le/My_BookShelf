@@ -42,7 +42,7 @@ export default reducer;
 
 //saga
 
-export const { getBooks, addBook, deleteBook } = createActions(
+export const { getBooks, addBook, deleteBook, editGetBook } = createActions(
   'GET_BOOKS',
   'ADD_BOOK',
   'DELETE_BOOK',
@@ -93,12 +93,11 @@ function* deleteBookSaga(action: Action<number>) {
 
 function* editGetBooksSaga(action: Action<number>) {
   try {
-    const bookId = action.payload;
     yield put(pending());
-    const token: string = yield select((state) => state.auth.token);
-    const books: BookType[] = yield call(BookService.getBooks, token);
-    const book: BookType[] = books.filter((book) => book.bookId === bookId);
-    yield put(success(...book));
+    const bookId = action.payload;
+    //const token: string = yield select((state) => state.auth.token);
+    const books: BookType[] = yield select((state) => state.books.books);
+    yield put(success(...books.filter((book) => book.bookId === bookId)));
   } catch (error: any) {
     yield put(fail(new Error(error.response?.data?.error || 'UNKNOWN_ERROR')));
   }

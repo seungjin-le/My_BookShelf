@@ -31,6 +31,7 @@ export interface BookType {
   author: string;
   createAt: string;
   url: string;
+  message: string;
 }
 export interface BookReqType {
   title: string;
@@ -38,3 +39,6 @@ export interface BookReqType {
   author: string;
   url: string;
 }
+export type idParams = {
+  id: string;
+};
