@@ -1,7 +1,7 @@
 import React from 'react';
-import useToken from '../hooks/useToken';
+import useToken from '../../hooks/useToken';
 import { Redirect } from 'react-router';
-import EditContainer from '../containers/editConteiner';
+import EditContainer from '../../containers/editConteiner';
 
 const Edit = () => {
   const token = useToken();

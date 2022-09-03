@@ -1,8 +1,8 @@
 import Home from './page/home';
-import SignIn from './page/signin';
-import Detail from './page/detail';
-import Edit from './page/edit';
-import Add from './page/add';
+import SignIn from './page/home/signin';
+import Detail from './page/books/detail';
+import Edit from './page/books/edit';
+import Add from './page/books/add';
 import NotFound from './page/home/notFound';
 import { ErrorBoundary } from 'react-error-boundary';
 import Error from './page/Error';

@@ -1,6 +1,6 @@
-import SignInContainer from '../containers/signInContainer';
+import SignInContainer from '../../containers/signInContainer';
 import { Redirect } from 'react-router';
-import useToken from '../hooks/useToken';
+import useToken from '../../hooks/useToken';
 
 const SignIn = () => {
   const token = useToken();
